@@ -15,21 +15,39 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, visit https://www.gnu.org/licenses/.
 */
 
-const { Clutter, Gio } = imports.gi;
+// const { Clutter, Gio } = imports.gi;
+// GNOME 45
+import Clutter from 'gi://Clutter';
+import Gio from 'gi://Gio';
 
-const Main = imports.ui.main;
+// const Main = imports.ui.main;
+// GNOME 45
+import * as Main from 'resource:///org/gnome/shell/ui/main.js';
+// @todo not sure what to do with this one
 var { ANIMATION_TIME } = imports.ui.overview;
 
 const Config = imports.misc.config;
+// GNOME 45
+import * as Config from 'resource:///org/gnome/shell/misc/config.js';
+
 const GNOME_SHELL_VERSION = Config.PACKAGE_VERSION.split('.');
 
-const ExtensionUtils = imports.misc.extensionUtils;
-const MultiMonitors = ExtensionUtils.getCurrentExtension();
-const Convenience = MultiMonitors.imports.convenience;
+// const ExtensionUtils = imports.misc.extensionUtils;
+// GNOME 45
+import * as ExtensionUtils from 'resource:///org/gnome/shell/misc/extensionUtils.js';
 
-const MMLayout = MultiMonitors.imports.mmlayout;
-const MMOverview = MultiMonitors.imports.mmoverview;
-const MMIndicator = MultiMonitors.imports.indicator;
+// const MultiMonitors = ExtensionUtils.getCurrentExtension();
+import * as MultiMonitors from './mmpanel.js';
+
+// const Convenience = MultiMonitors.imports.convenience;
+import * as Convenience from './convenience.js'; 
+
+// const MMLayout = MultiMonitors.imports.mmlayout;
+import * as MMLayout from './mmlayout.js'; 
+// const MMOverview = MultiMonitors.imports.mmoverview;
+import * as MMOverview from './mmoverview.js'; 
+// const MMIndicator = MultiMonitors.imports.indicator;
+import * as MMIndicator from './indicator.js'; 
 
 const OVERRIDE_SCHEMA = 'org.gnome.shell.overrides';
 const MUTTER_SCHEMA = 'org.gnome.mutter';

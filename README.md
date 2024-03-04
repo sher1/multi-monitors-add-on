@@ -5,6 +5,10 @@ and rewritten from scratch for gnome-shell version 3.10.4. Adds panels
 and thumbnails for additional monitors. Settings changes are applied
 in dynamic fashion, no restart needed.
 
+
+# Documentation for upgrade to Gnome 45
+  (https://gjs.guide/extensions/upgrading/gnome-shell-45.html#esm)
+
 # Versions
 
 - Branch [master](https://github.com/lazanet/multi-monitors-add-on/tree/master) contains extension for GNOME 42, 43, 44

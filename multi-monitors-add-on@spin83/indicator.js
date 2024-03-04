@@ -15,11 +15,20 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, visit https://www.gnu.org/licenses/.
 */
 
-const { St, Gio, GLib, GObject } = imports.gi;
+// const { St, Gio, GLib, GObject } = imports.gi;
+import { St, Gio, GLib, GObject } from 'gi://gi';
 
-const Util = imports.misc.util;
-const Main = imports.ui.main;
+// const Util = imports.misc.util;
+// GNOME 45
+import * as Util from 'resource:///org/gnome/shell/misc/util.js';
+// const Main = imports.ui.main;
+// GNOME 45
+import * as Main from 'resource:///org/gnome/shell/ui/main.js';
+
 const PanelMenu = imports.ui.panelMenu;
+// GNOME 45
+import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelmenu.js';
+
 
 const Gettext = imports.gettext.domain('multi-monitors-add-on');
 const _ = Gettext.gettext;
